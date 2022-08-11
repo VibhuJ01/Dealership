@@ -20,14 +20,17 @@ def main():
     elif(ch == "2"):
         print("1. Signup")
         print("2. Login")
-        print("3. Back")
         ch2 = input("What do you want to do?: ")
         print("\n--------------------------------------------\n")
 
         if(ch2 == "1"):
             signup()
+            
         elif(ch2 == "2"):
             login()
+
+        else:
+            print("Wrong Input")  
 
         main()
         

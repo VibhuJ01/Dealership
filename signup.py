@@ -7,6 +7,7 @@ cur1 = mycon.cursor()
 
 def signup():
     global username,password
+    
     fname = input("Enter your First Name :\t")
     lname = input("Enter your Last Name  :\t")
     username = input("Enter your Username:\t")
@@ -22,7 +23,7 @@ def signup():
 
     if (res == 1 and res2 == 1):
         sql = 'insert into login values(%s,%s,%s,%s)'
-        data = (fname,lname,username,password)
+        data = (fname,lname,username.lower(),password)
         cur1.execute(sql,data)
         mycon.commit()
         print("Signup Complete")
@@ -30,7 +31,6 @@ def signup():
         ch3 = input("Do you want to login?(y/n) ")
         if(ch3.lower() == 'y'):
             login()
-
             
     else:
         print("Email or Password is not valid")
@@ -46,8 +46,7 @@ def email_validation():
         if(i == '@'):
             print("Username Validation Complete\n")
             a = 1
-            break
-    
+            break    
     return a
 
 def password_validation():
@@ -57,7 +56,6 @@ def password_validation():
             print("Password Validation Complete\n")
             a = 1
             break
-
     return a
 
 

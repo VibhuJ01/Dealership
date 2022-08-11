@@ -14,7 +14,7 @@ def login():
     result = cur1.fetchall()
     flag = 0
     for i in result:
-        if(i[2] == username and i[3] == password):
+        if(i[2] == username.lower() and i[3] == password):
             print('Login is succesful')
             print("\n--------------------------------------------\n")
             flag = 1
@@ -49,5 +49,6 @@ def afterlogin():
         
     else:
         print("Wrong Input")
+        print("\n--------------------------------------------\n")
 
     afterlogin()

@@ -30,7 +30,7 @@ def buy():
     print("2. Manual")
     print("3. Any")
     trans = int(input("Preferred fuel type? "))
-    print("\n--------------------------------------------\n")
+    
 
     #Processing->
     df = df.loc[df['price'] <= uprice]
@@ -57,7 +57,7 @@ def buy():
         print("\n--------------------------------------------\n")
         return
     
-    printing()
+    printing(df)
     fil()
 
 def fil():
@@ -79,7 +79,8 @@ def fil():
         
     
     elif(ch == "2"):
-        filters()
+        filters(df)
+        fil()
 
     elif(ch == "3"):
         print("\n--------------------------------------------\n")
@@ -90,9 +91,8 @@ def fil():
         print("\n--------------------------------------------\n")
         fil()
     
-def printing():
-    
+def printing(df):
+    print("\n--------------------------------------------\n")
     print(tabulate(df, headers = 'keys', tablefmt = 'pretty'))
     print("\n--------------------------------------------\n")
-
 
