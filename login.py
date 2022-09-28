@@ -18,7 +18,7 @@ def login():
             print('Login is succesful')
             print("\n--------------------------------------------\n")
             flag = 1
-            afterlogin()
+            afterlogin(username,password)
 
             
     if(flag != 1):
@@ -29,12 +29,13 @@ def login():
         
         if(ch5 == 'y'):
             login()  
-
-def afterlogin():
+    
+def afterlogin(username,password):
 
     print("1. Buy a car")
     print("2. Sell a car")
-    print("3. Logout")
+    print("3. Change Password")
+    print("4. Logout")
     ch = input("What do you want to do? ")
     print("\n--------------------------------------------\n")
 
@@ -45,10 +46,48 @@ def afterlogin():
         pass
 
     elif(ch == "3"):
+        changepass(username,password)
+        
+    elif(ch == "4"):
         return
         
     else:
         print("Wrong Input")
         print("\n--------------------------------------------\n")
 
-    afterlogin()
+    afterlogin(username,password)
+
+
+
+
+def changepass(username,password):
+    
+    oldpass = input("Enter old password\t")
+    if(oldpass == password):
+        newpass = input("Enter new password\t") 
+        sql = '''update login 
+                set password = %s
+                where username = %s'''
+        data = (newpass,username)
+        cur1.execute(sql,data)
+        mycon.commit()
+        print("Changing password....")
+        print("Your new password is  ",newpass)
+        print("\n--------------------------------------------\n")
+        
+    else:
+        print("\n--------------------------------------------\n")
+        print("Your Old password did not match")
+        print("\n--------------------------------------------\n")
+        ch = input("Do you want to try again?(y/n) ")
+        print("\n--------------------------------------------\n")
+
+        if(ch.lower() == "y"):
+            changepass(username,password)
+            
+
+        elif(ch.lower() != "n"):
+            print("Wrong Input")
+            print("\n--------------------------------------------\n")
+            
+            

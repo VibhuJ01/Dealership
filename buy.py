@@ -77,7 +77,6 @@ def fil():
         else:
             return
         
-    
     elif(ch == "2"):
         filters(df)
         fil()

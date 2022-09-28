@@ -1,34 +1,56 @@
+{} - Completed
+[] - Current
+() - Future plans
+
 buy or sell 
 
-if buy:
+{
+Buy:
 nessesary details
 price range
 seats(less than 5 or more than 5)
 fuel type(any)
 transmission type(any)
-
-filters;
+Filters:
 mileage 
 above what year
 km driven
 
+Login:
+change password
 
-if sell:
+}
+
+
+[
+buy a new car / message seller
+message seller:
+number
+make an offer
+location
+custom
+Car image Scrapping
+]
+
+
+(
+Sell:
+Seller: Full Name, number, permanent adress, DOB, email id, alternate contact, (adhaar, pan, passport, DL)document
+
+Car verification: RC number, insurance(applied date and expire date), pollution(applied date and expire date), type of seller(first or second),document
+
+Description of car:
+Message from seller
 name of car with model no 
 year of purchased 
-km driven 
+odometer driven 
 fuel type
 transmission_type
 Mileage
-Seats 
- 
-extra details
+Seats
 Engine
 Horse Power 
 
-
-
-
-
-
-
+Manager:
+gaadi verification
+)

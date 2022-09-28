@@ -19,7 +19,7 @@ def filters(df):
         df = df.loc[df['year'] >= mod]
 
     elif(ch == "3"):
-        odo = input("Minimum Odometer Reading? ")       
+        odo = input("Maximum Odometer Reading? ")     
         df = df.loc[df['Odometer_Reading'] <= odo]
 
     elif(ch == "4"):
@@ -46,4 +46,5 @@ def printing(df):
     print("\n--------------------------------------------\n")
     print(tabulate(df, headers = 'keys', tablefmt = 'pretty'))
     print("\n--------------------------------------------\n")
+
 

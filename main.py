@@ -33,8 +33,6 @@ def main():
             print("Wrong Input")  
 
         main()
-        
-
 
     elif(ch == "3"):
         print("Thank you for Visiting Dealership")
