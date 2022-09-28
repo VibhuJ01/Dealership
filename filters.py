@@ -1,7 +1,8 @@
 from tabulate import tabulate
 import pandas as pd
-
+    
 def filters(df):
+    print("\n--------------------------------------------\n")
     print("We provide the following Filters:")
     print("1. Minimum Mileage")
     print("2. Model Year")
@@ -23,28 +24,52 @@ def filters(df):
         df = df.loc[df['Odometer_Reading'] <= odo]
 
     elif(ch == "4"):
-        return
+        return df
 
     else:
         print("Wrong Input")
         print("\n--------------------------------------------\n")  
-        filters(df)
-        
-    print("\n--------------------------------------------\n")    
+        df = filters(df)
+
+             
     printing(df)
-    filters(df)
+    df = filters(df)
+    return df
 
 def pick(df):
-    ch = int(input("Serial Id of car of your choice: "))
-    print("\n--------------------------------------------\n")
-    print(df.loc[ch])
-    print("\n--------------------------------------------\n")
-    ch = input("Do wanna buy this car?(y/n) ")
-  
+
+    try:
+        ch = int(input("Serial Id of car of your choice: "))
+
+    except:
+        print("\n--------------------------------------------\n")
+        print("Wrong Input")
+        print("\n--------------------------------------------\n")
+        return "No",0
+
+    else:
+        
+        if(ch in df["Serial_Id"]):
+            print("\n--------------------------------------------\n")
+            print(df.loc[ch])
+            print("\n--------------------------------------------\n")
+            ch1 = input("Do wanna buy this car?(y/n) ")
+            print("\n--------------------------------------------\n")
+            if(ch1.lower() == "y"):
+                a = df.loc[ch]
+                return a,1
+
+            else:
+                return "No",0
+        else:
+            print("\n--------------------------------------------\n")
+            print("Wrong Input, Try Again")
+            print("\n--------------------------------------------\n")
+            return "No",0
+        
+    
 
 def printing(df):
     print("\n--------------------------------------------\n")
-    print(tabulate(df, headers = 'keys', tablefmt = 'pretty'))
+    print(tabulate(df, headers = 'keys', tablefmt = 'pretty', showindex = False))
     print("\n--------------------------------------------\n")
-
-

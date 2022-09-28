@@ -26,7 +26,7 @@ def login():
         print("\n--------------------------------------------\n")
         
         ch5 = input("Do you want to login again?(y/n) ")
-        
+        print("\n--------------------------------------------\n")
         if(ch5 == 'y'):
             login()  
     
@@ -57,9 +57,6 @@ def afterlogin(username,password):
 
     afterlogin(username,password)
 
-
-
-
 def changepass(username,password):
     
     oldpass = input("Enter old password\t")
@@ -89,5 +86,3 @@ def changepass(username,password):
         elif(ch.lower() != "n"):
             print("Wrong Input")
             print("\n--------------------------------------------\n")
-            
-            

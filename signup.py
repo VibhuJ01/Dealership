@@ -57,7 +57,3 @@ def password_validation():
             a = 1
             break
     return a
-
-
-          
-    

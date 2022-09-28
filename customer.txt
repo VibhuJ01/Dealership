@@ -18,11 +18,13 @@ km driven
 
 Login:
 change password
-
 }
 
 
 [
+print before picking
+check for empty df after filters
+
 buy a new car / message seller
 message seller:
 number

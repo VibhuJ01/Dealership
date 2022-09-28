@@ -32,16 +32,18 @@ def main():
         else:
             print("Wrong Input")  
 
-        main()
+       
 
     elif(ch == "3"):
         print("Thank you for Visiting Dealership")
         print("Have a Nice Day")
         print("\n--------------------------------------------\n")
+        return
         
     else:
         print("Wrong Input")
-        main()
-
+        
+    main()
+    
 if __name__ == "__main__":
     main()
