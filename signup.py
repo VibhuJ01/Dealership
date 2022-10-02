@@ -1,4 +1,5 @@
 from login import login
+from login import password_validation
 
 import mysql.connector as ms
 mycon = ms.connect(host="localhost",user="root",db="autos",passwd="vibhu")
@@ -18,7 +19,7 @@ def signup():
     print("Validating Username....\n")
     res = email_validation()
     print("Validating Password....\n")
-    res2 = password_validation()
+    res2 = password_validation(password)
 
 
     if (res == 1 and res2 == 1):
@@ -49,11 +50,4 @@ def email_validation():
             break    
     return a
 
-def password_validation():
-    a = 2
-    for i in password:
-        if(i.isupper() == True):
-            print("Password Validation Complete\n")
-            a = 1
-            break
-    return a
+

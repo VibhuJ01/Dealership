@@ -1,4 +1,5 @@
 from buy import buy
+from seller import seller
 
 import mysql.connector as ms
 mycon = ms.connect(host="localhost",user="root",db="autos",passwd="vibhu")
@@ -43,7 +44,7 @@ def afterlogin(username,password):
         buy()
 
     elif(ch == "2"):
-        pass
+        seller(username)
 
     elif(ch == "3"):
         changepass(username,password)
@@ -59,19 +60,30 @@ def afterlogin(username,password):
 
 def changepass(username,password):
     
-    oldpass = input("Enter old password\t")
+    oldpass = input("Enter old password:\t")
     if(oldpass == password):
-        newpass = input("Enter new password\t") 
-        sql = '''update login 
-                set password = %s
-                where username = %s'''
-        data = (newpass,username)
-        cur1.execute(sql,data)
-        mycon.commit()
-        print("Changing password....")
-        print("Your new password is  ",newpass)
+        newpass = input("Enter new password:\t")
+        print("Password should have 1 uppercase")
         print("\n--------------------------------------------\n")
-        
+        print("Validating Password....\n")
+        print("\n--------------------------------------------\n")
+        a = password_validation(newpass)
+        if(a == 1):
+            sql = '''update login 
+                    set password = %s
+                    where username = %s'''
+            data = (newpass,username)
+            cur1.execute(sql,data)
+            mycon.commit()
+            print("\n--------------------------------------------\n")
+            print("Changing password....")
+            print("Your new password is ",newpass)
+            print("\n--------------------------------------------\n")
+
+        else:
+            print("New Password is not valid")
+            print("\n--------------------------------------------\n")
+            
     else:
         print("\n--------------------------------------------\n")
         print("Your Old password did not match")
@@ -86,3 +98,12 @@ def changepass(username,password):
         elif(ch.lower() != "n"):
             print("Wrong Input")
             print("\n--------------------------------------------\n")
+
+def password_validation(password):
+    a = 2
+    for i in password:
+        if(i.isupper() == True):
+            print("Password Validation Complete")
+            a = 1
+            break
+    return a

@@ -2,40 +2,8 @@
 [] - Current
 () - Future plans
 
-buy or sell 
-
-{
-Buy:
-nessesary details
-price range
-seats(less than 5 or more than 5)
-fuel type(any)
-transmission type(any)
-Filters:
-mileage 
-above what year
-km driven
-
-Login:
-change password
-}
-
-
 [
-print before picking
-check for empty df after filters
 
-buy a new car / message seller
-message seller:
-number
-make an offer
-location
-custom
-Car image Scrapping
-]
-
-
-(
 Sell:
 Seller: Full Name, number, permanent adress, DOB, email id, alternate contact, (adhaar, pan, passport, DL)document
 
@@ -52,7 +20,43 @@ Mileage
 Seats
 Engine
 Horse Power 
+]
+
+
+(
+buy a new car / message seller
+message seller:
+number
+make an offer
+location
+custom
+Car image Scrapping
 
 Manager:
 gaadi verification
+
 )
+
+{
+Buy:
+nessesary details
+price range
+seats(less than 5 or more than 5)
+fuel type(any)
+transmission type(any)
+Filters:
+mileage 
+above what year
+km driven
+
+Login:
+change password
+
+Errors:
+print before picking
+
+New password ka verification karna hai
+check for empty df after filters
+
+RESGISTERED OR DO YOU WANT TO REGISTER?
+}

@@ -2,7 +2,6 @@ from tabulate import tabulate
 import pandas as pd
     
 def filters(df):
-    print("\n--------------------------------------------\n")
     print("We provide the following Filters:")
     print("1. Minimum Mileage")
     print("2. Model Year")
@@ -12,7 +11,7 @@ def filters(df):
     print("\n--------------------------------------------\n")
 
     if(ch == "1"):
-        mil = input("What Mileage you are looking for? ")
+        mil = float(input("What Mileage you are looking for? "))
         df = df.loc[df['Mileage'] >= mil]
         
     elif(ch == "2"):
@@ -31,7 +30,12 @@ def filters(df):
         print("\n--------------------------------------------\n")  
         df = filters(df)
 
-             
+    if(len(df) == 0):
+            print("\n--------------------------------------------\n")
+            print("We dont have cars of that specification")
+            print("\n--------------------------------------------\n")
+            return df
+        
     printing(df)
     df = filters(df)
     return df

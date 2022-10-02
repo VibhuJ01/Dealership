@@ -2333,7 +2333,7 @@ Serial_Id,name,price,year,Odometer_Reading,fuel,transmission,Mileage,Engine,Hors
 2331,Maruti Ertiga BSIV VXI,6.95,2016,"37,000.00",Petrol,Manual,17.5,1373,91.1,7
 2332,Audi Q5 2.0 TDI,13.5,2011,"53,343.00",Diesel,Automatic,12.8,1968,167.6,5
 2333,Mercedes-Benz E-Class E250 CDI Blue Efficiency,11.25,2011,"57,000.00",Diesel,Automatic,14.21,2143,203,5
-2334,Mahindra E Verito D2,9.45,2020,"2,746.00",Electric,Automatic,0.0 km/hr,72,41.57,5
+2334,Mahindra E Verito D2,9.45,2020,"2,746.00",Electric,Automatic,0,72,41.57,5
 2335,Hyundai i20 1.2 Sportz,3.1,2012,"90,000.00",Petrol,Manual,17,1197,80,5
 2336,Ford Figo 1.2P Titanium MT,3.55,2015,"20,319.00",Petrol,Manual,18.16,1196,86.8,5
 2337,Renault Duster 110PS Diesel RxL,5.41,2014,"76,000.00",Diesel,Manual,19.64,1461,108.45,5
@@ -2604,7 +2604,7 @@ Serial_Id,name,price,year,Odometer_Reading,fuel,transmission,Mileage,Engine,Hors
 2602,Mercedes-Benz S-Class S 350 CDI,14.55,2010,"50,312.00",Diesel,Automatic,13.5,2987,282,5
 2603,Renault KWID RXT,3.25,2016,"37,250.00",Petrol,Manual,25.17,799,53.3,5
 2604,Honda Civic 1.8 V MT,2.45,2008,"61,000.00",Petrol,Manual,13.5,1799,130,5
-2605,Toyota Camry Hybrid,18.5,2015,"49,500.00",Electric,Automatic,19.16 km/hr,2494,157.7,5
+2605,Toyota Camry Hybrid,18.5,2015,"49,500.00",Electric,Automatic,19.16,2494,157.7,5
 2606,Maruti Ertiga SHVS ZDI,7.7,2015,"76,000.00",Diesel,Manual,24.52,1248,88.5,7
 2607,Chevrolet Beat LT,2,2011,"50,000.00",Petrol,Manual,18.6,1199,79.4,5
 2608,Hyundai Grand i10 Sportz,4.8,2016,"21,000.00",Petrol,Manual,18.9,1197,82,5
@@ -3624,7 +3624,7 @@ Serial_Id,name,price,year,Odometer_Reading,fuel,transmission,Mileage,Engine,Hors
 3622,Hyundai Creta 1.6 SX Automatic Diesel,13.4,2017,"68,000.00",Diesel,Automatic,17.6,1582,126.2,5
 3623,Toyota Innova Crysta 2016-2020 2.4 GX MT BSIV,15,2016,"40,000.00",Diesel,Manual,13.68,2393,147.8,7
 3624,Nissan Sunny XL CVT,3.75,2015,"58,479.00",Petrol,Automatic,17.97,1498,99.6,5
-3625,Tata Tigor EV XM,7.75,2019,"4,076.00",Electric,Automatic,0.0 km/hr, ,40.23,5
+3625,Tata Tigor EV XM,7.75,2019,"4,076.00",Electric,Automatic,0, ,40.23,5
 3626,Skoda Superb Elegance 1.8 TSI AT,3.75,2010,"82,000.00",Petrol,Automatic,13.7,1798,157.75,5
 3627,Volkswagen Polo Diesel Trendline 1.2L,3.75,2013,110000,Diesel,Manual,22.07,1199,73.9,5
 3628,Maruti Celerio X AMT ZXI Option,5.5,2018,"9,522.00",Petrol,Automatic,21.63,998,67.05,5
@@ -11961,7 +11961,7 @@ Serial_Id,name,price,year,Odometer_Reading,fuel,transmission,Mileage,Engine,Hors
 11959,Hyundai EON Era Plus,3,2019,"15,000.00",Petrol,Manual,21.1,814,55.2,5
 11960,Hyundai Grand i10 CRDi Sportz,4.25,2017,"40,000.00",Diesel,Manual,24,1120,70,5
 11961,Maruti Swift VDI,4.5,2015,"61,000.00",Diesel,Manual,28.4,1248,74,5
-11962,Mahindra e2oPlus P6,4,2018,"26,000.00",Electric,Automatic,110.0 km/hr, ,25.4,4
+11962,Mahindra e2oPlus P6,4,2018,"26,000.00",Electric,Automatic,110, ,25.4,4
 11963,Maruti Alto LX,1.04,2008,"50,000.00",Petrol,Manual,19.7,796,46.3,5
 11964,Hyundai Creta 1.4 CRDi S,7.7,2016,121054,Diesel,Manual,21.38,1396,88.7,5
 11965,Chevrolet Beat PS,2.5,2015,"25,000.00",Petrol,Manual,18.6,1199,76.8,5
@@ -15095,7 +15095,7 @@ Serial_Id,name,price,year,Odometer_Reading,fuel,transmission,Mileage,Engine,Hors
 15093,Honda CR-V 2.4 MT,5.35,2010,137000,Petrol,Manual,10.8,2354,152,5
 15094,Mahindra XUV500 W4,10,2015,186000,Diesel,Manual,15.1,2179,140,7
 15095,Tata Indigo LS,1.2,2008,120000,Diesel,Manual,17,1405,70,5
-15096,Toyota Camry Hybrid,20,2015,"60,000.00",Electric,Automatic,19.16 km/hr,2494,157.7,5
+15096,Toyota Camry Hybrid,20,2015,"60,000.00",Electric,Automatic,19.16,2494,157.7,5
 15097,Mercedes-Benz M-Class ML 250 CDI,27.9,2015,"58,000.00",Diesel,Automatic,15.26,2143,203.2,5
 15098,Hyundai Santro Asta,5.25,2018,"2,925.00",Petrol,Manual,20.3,1086,68.07,5
 15099,Tata Nano Twist XT,1.95,2014,"29,000.00",Petrol,Manual,25.4,624,37.5,4
@@ -15687,7 +15687,7 @@ Serial_Id,name,price,year,Odometer_Reading,fuel,transmission,Mileage,Engine,Hors
 15685,Maruti Wagon R AMT VXI,4,2017,"70,000.00",Petrol,Automatic,20.51,998,67,5
 15686,Maruti Swift VDI,4.3,2013,"90,000.00",Diesel,Manual,22.9,1248,74,5
 15687,Hyundai i20 Asta Option 1.4 CRDi,6.5,2015,120000,Diesel,Manual,22.54,1396,88.73,5
-15688,Mahindra e2o T2,3.6,2015,"42,862.00",Electric,Automatic,120.0 km/hr,0,25.5,5
+15688,Mahindra e2o T2,3.6,2015,"42,862.00",Electric,Automatic,120,0,25.5,5
 15689,Nissan Micra XV CVT,5.1,2016,"17,000.00",Petrol,Automatic,19.34,1198,76,5
 15690,Honda Jazz 1.5 VX i DTEC,5.95,2015,"70,100.00",Diesel,Manual,27.3,1498,98.6,5
 15691,Lexus ES 300h,39.9,2018,"28,000.00",Petrol,Automatic,22.37,2487,214.56,5
@@ -17400,7 +17400,7 @@ Serial_Id,name,price,year,Odometer_Reading,fuel,transmission,Mileage,Engine,Hors
 17398,Maruti Celerio Green VXI,4.11,2016,"48,129.00",CNG,Manual,31.79,998,58.2,5
 17399,Maruti Swift Dzire Tour LXI,3.4,2016,189000,Petrol,Manual,19,1197,85.8,5
 17400,Hyundai Creta 1.6 CRDi AT SX Plus,14.21,2018,"65,000.00",Diesel,Automatic,17.01,1582,126.2,5
-17401,Mahindra E Verito D2,11.97,2019,"18,281.00",Electric,Automatic,0.0 km/hr,72,41.57,5
+17401,Mahindra E Verito D2,11.97,2019,"18,281.00",Electric,Automatic,0,72,41.57,5
 17402,Ford Fiesta Classic 1.4 Duratorq CLXI,3.95,2012,"52,000.00",Diesel,Manual,17.8,1399,67,5
 17403,Renault Triber RXZ BSIV,7.25,2019,"11,000.00",Petrol,Manual,20,999,72,7
 17404,Toyota Fortuner 4x2 AT,28,2017,150000,Diesel,Automatic,12.55,2982,168.5,7
@@ -17792,7 +17792,7 @@ Serial_Id,name,price,year,Odometer_Reading,fuel,transmission,Mileage,Engine,Hors
 17790,Maruti Wagon R VXI with ABS,4.5,2014,"39,264.00",Petrol,Manual,20.51,998,67.06,5
 17791,Ford Ecosport 1.5 DV5 MT Titanium Optional,5.7,2013,"57,000.00",Diesel,Manual,22.7,1498,89.84,5
 17792,Toyota Innova 2.5 G (Diesel) 8 Seater,7.9,2013,161823,Diesel,Manual,12.99,2494,100.6,8
-17793,Mahindra e2o T2,4.5,2015,"40,000.00",Electric,Automatic,120.0 km/hr,0,25.5,5
+17793,Mahindra e2o T2,4.5,2015,"40,000.00",Electric,Automatic,120,0,25.5,5
 17794,Hyundai Grand i10 1.2 Kappa Sportz BSIV,5.95,2019,"9,000.00",Petrol,Manual,18.9,1197,81.86,5
 17795,Maruti Swift VXI,3.4,2013,"54,000.00",Petrol,Manual,18.6,1197,85.8,5
 17796,Volkswagen Ameo 1.2 MPI Comfortline,5.55,2018,"30,698.00",Petrol,Manual,17,1198,73.75,5
@@ -18412,7 +18412,7 @@ Serial_Id,name,price,year,Odometer_Reading,fuel,transmission,Mileage,Engine,Hors
 18410,Maruti Ciaz ZDi Plus SHVS,7.45,2017,"47,000.00",Diesel,Manual,28.09,1248,88.5,5
 18411,Honda Amaze S Option i-VTEC,4.75,2017,"33,033.00",Petrol,Manual,17.8,1198,86.7,5
 18412,Honda Jazz 1.2 VX i VTEC,8.25,2019,"12,000.00",Petrol,Manual,18.7,1199,88.7,5
-18413,Mahindra e2o Premium,3.25,2013,"50,000.00",Electric,Automatic,120.0 km/hr,0,25.5,5
+18413,Mahindra e2o Premium,3.25,2013,"50,000.00",Electric,Automatic,120,0,25.5,5
 18414,Honda Jazz 1.5 VX i DTEC,10.1,2018,"19,023.00",Diesel,Manual,27.3,1498,98.6,5
 18415,BMW 7 Series 730Ld,19.5,2011,"70,000.00",Diesel,Automatic,14.49,2993,258,5
 18416,Maruti Celerio VXI AT Optional,4.49,2014,"29,000.00",Petrol,Automatic,23.1,998,67.04,5
@@ -18575,7 +18575,7 @@ Serial_Id,name,price,year,Odometer_Reading,fuel,transmission,Mileage,Engine,Hors
 18573,Renault KWID 1.0 RXT Optional,3.7,2017,"15,000.00",Petrol,Manual,23.01,999,67,5
 18574,Honda City i-VTEC V,7.9,2017,"29,000.00",Petrol,Manual,17.4,1497,117.6,5
 18575,Hyundai Verna 1.6 CRDI,5.3,2011,110000,Diesel,Manual,22.32,1582,126.3,5
-18576,Toyota Camry Hybrid,18.65,2016,"85,000.00",Electric,Automatic,19.16 km/hr,2494,157.7,5
+18576,Toyota Camry Hybrid,18.65,2016,"85,000.00",Electric,Automatic,19.16,2494,157.7,5
 18577,Hyundai i20 1.2 Magna Executive,6.85,2017,"11,577.00",Petrol,Manual,18.6,1197,81.83,5
 18578,Hyundai i20 Asta 1.2,4.3,2013,"64,321.00",Petrol,Manual,18.5,1197,82.85,5
 18579,Tata Hexa XTA,14.5,2017,"21,000.00",Diesel,Automatic,17.6,2179,153.86,7
@@ -18931,7 +18931,7 @@ Serial_Id,name,price,year,Odometer_Reading,fuel,transmission,Mileage,Engine,Hors
 18929,Maruti Swift DDiS VDI,2.55,2010,"78,000.00",Diesel,Manual,28.4,1248,74,5
 18930,Mahindra Scorpio SLE BSIV,7.45,2014,"98,000.00",Diesel,Manual,12.05,2179,120,8
 18931,Toyota Innova 2.5 VX (Diesel) 7 Seater,10,2014,146000,Diesel,Manual,12.99,2494,100.6,7
-18932,Toyota Camry Hybrid,16.99,2015,"64,000.00",Electric,Automatic,19.16 km/hr,2494,157.7,5
+18932,Toyota Camry Hybrid,16.99,2015,"64,000.00",Electric,Automatic,19.16,2494,157.7,5
 18933,Maruti Swift VDI BSIV,6,2016,100000,Diesel,Manual,25.2,1248,74,5
 18934,Hyundai i20 Asta 1.4 CRDi,5.99,2014,"69,000.00",Diesel,Manual,22.54,1396,88.73,5
 18935,Honda Amaze VX Diesel,7.25,2016,"30,685.00",Diesel,Manual,24.7,1498,98.63,5
@@ -19106,7 +19106,7 @@ Serial_Id,name,price,year,Odometer_Reading,fuel,transmission,Mileage,Engine,Hors
 19104,Toyota Yaris V Optional,10.25,2018,"17,000.00",Petrol,Manual,17.18,1496,105.94,5
 19105,Honda New Aord 2011-2014 2.4 M/T,6.7,2012,"76,000.00",Petrol,Manual,12.8,2354,177.6,5
 19106,Hyundai Grand i10 1.2 Kappa Asta,5.4,2015,"19,526.00",Petrol,Manual,18.9,1197,81.86,5
-19107,Mahindra E Verito D6,7.25,2020,"8,200.00",Electric,Automatic,0.0 km/hr,72,41.57,5
+19107,Mahindra E Verito D6,7.25,2020,"8,200.00",Electric,Automatic,0,72,41.57,5
 19108,Toyota Innova 2.5 G (Diesel) 7 Seater BS IV,4.8,2010,195000,Diesel,Manual,12.8,2494,102,8
 19109,Maruti Swift Dzire AMT ZXI Plus BS IV,7.65,2018,"14,506.00",Petrol,Automatic,22,1197,81.8,5
 19110,Maruti Baleno Zeta 1.2,7.36,2019,"25,000.00",Petrol,Manual,21.4,1197,83.1,5
@@ -19126,7 +19126,7 @@ Serial_Id,name,price,year,Odometer_Reading,fuel,transmission,Mileage,Engine,Hors
 19124,Hyundai Grand i10 1.2 Kappa Magna BSIV,5.4,2019,"10,000.00",Petrol,Manual,18.9,1197,81.86,5
 19125,Maruti Wagon R LXI Minor,2,2009,"20,000.00",Petrol,Manual,18.9,1061,67,5
 19126,Maruti Ignis 1.2 AMT Delta BSIV,5.35,2018,"10,503.00",Petrol,Automatic,20.89,1197,81.8,5
-19127,Tata Nexon EV XM,13.99,2021,"5,000.00",Electric,Automatic,0.0 km/hr,0,127,5
+19127,Tata Nexon EV XM,13.99,2021,"5,000.00",Electric,Automatic,0,0,127,5
 19128,Honda City i-VTEC ZX,11.38,2017,"12,729.00",Petrol,Manual,17.14,1497,117.6,5
 19129,Mahindra KUV 100 mFALCON D75 K4 Plus 5str,4.75,2016,"72,643.00",Diesel,Manual,25.32,1198,77,5
 19130,Maruti Wagon R VXI with ABS,3.75,2015,"25,000.00",Petrol,Manual,20.51,998,67.06,5
@@ -19789,7 +19789,7 @@ Serial_Id,name,price,year,Odometer_Reading,fuel,transmission,Mileage,Engine,Hors
 19787,Audi A6 2.0 TDI Premium Plus,17.75,2014,"33,000.00",Diesel,Automatic,17.68,1968,174.33,5
 19788,Hyundai Santa Fe 2WD MT,13,2014,"72,468.00",Diesel,Manual,14.74,2199,194.3,7
 19789,Maruti Dzire VXI,2.65,2009,"44,000.00",Petrol,Manual,23.26,1197,88.5,5
-19790,Hyundai Kona Premium,21.75,2019,"6,000.00",Electric,Automatic,0.0 km/hr,0,134.1,5
+19790,Hyundai Kona Premium,21.75,2019,"6,000.00",Electric,Automatic,0,0,134.1,5
 19791,Jeep Compass 2.0 Limited,17.45,2018,"60,000.00",Diesel,Manual,17.1,1956,170,5
 19792,Skoda Rapid 1.6 TDI Active,3.51,2012,"74,000.00",Diesel,Manual,20.5,1598,103.5,5
 19793,Volkswagen Polo 2015-2019 1.2 MPI Highline,4.65,2014,"18,520.00",Petrol,Manual,16.2,1199,74,5

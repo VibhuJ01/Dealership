@@ -6,6 +6,9 @@ from filters import pick
 def buy():
     df = pd.read_csv("dataset.csv")
     df = df.dropna()
+    convert_dict = {'Mileage': float}
+ 
+    df = df.astype(convert_dict)
     
     #Input->
     try:
@@ -87,6 +90,9 @@ def fil(df):
         
     elif(ch == "2"):
         df = filters(df)
+        if(len(df) == 0):
+            return
+        
         fil(df)
 
     elif(ch == "3"):
