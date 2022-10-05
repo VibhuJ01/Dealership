@@ -11,7 +11,7 @@ def filters(df):
     print("\n--------------------------------------------\n")
 
     if(ch == "1"):
-        mil = float(input("What Mileage you are looking for? "))
+        mil = float(input("What Mileage you are looking for?(Km/L) "))
         df = df.loc[df['Mileage'] >= mil]
         
     elif(ch == "2"):

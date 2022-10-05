@@ -12,7 +12,7 @@ def signup():
     fname = input("Enter your First Name :\t")
     lname = input("Enter your Last Name  :\t")
     username = input("Enter your Username:\t")
-    print("Password should have 1 uppercase")
+    print("Password must have 1 uppercase")
     password = input("Enter your Password:\t")
     print("\n--------------------------------------------\n")
     
@@ -20,6 +20,7 @@ def signup():
     res = email_validation()
     print("Validating Password....\n")
     res2 = password_validation(password)
+    print("\n--------------------------------------------\n")
 
 
     if (res == 1 and res2 == 1):
@@ -37,6 +38,7 @@ def signup():
         print("Email or Password is not valid")
         print("\n--------------------------------------------\n")
         try1 = input("Do you want to sign up again?(y/n) ")
+        print("\n--------------------------------------------\n")
         if(try1.lower() == 'y'):
             signup()
 
