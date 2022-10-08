@@ -37,22 +37,21 @@ def sell():
         name = input("Enter name of your car: ")
         print("\n--------------------------------------------\n")
         
-        price = float(input("Enter price in lakhs: "))
+        price = float(input("Enter price (in lakhs): "))
         print("\n--------------------------------------------\n")
         
-        year = int(input("Enter model year: "))
+        year = int(input("Enter Model Year: "))
         print("\n--------------------------------------------\n")
         
-        odo = int(input("Enter odometer reading: "))
+        odo = int(input("Enter Odometer Reading: "))
         print("\n--------------------------------------------\n")
+
         
         print("Fuel type availabe:")
         print("1. Petrol")
         print("2. Diesel")
         print("3. CNG")
         fuel = int(input("Fuel type of your car: "))
-        print("\n--------------------------------------------\n")
-
         if(fuel == 1):
             fuel = 'Petrol'
             
@@ -66,12 +65,12 @@ def sell():
             print("Wrong Input, Try again")
             print("\n--------------------------------------------\n")
             return
-        
+        print("\n--------------------------------------------\n")
+
         print("Transmission type availabe:")
         print("1. Automatic")
         print("2. Manual")
-        trans = int(input("Preferred fuel type? "))
-        print("\n--------------------------------------------\n")
+        trans = int(input("Transmission type of your car: "))
 
         if(trans == 1):
             trans = 'Automatic'
@@ -83,6 +82,24 @@ def sell():
             print("Wrong Input, Try again")
             print("\n--------------------------------------------\n")
             return
+        print("\n--------------------------------------------\n")
+
+        mil = float(input("Average Mileage of your car(#): "))
+        engine = int(input("Engine Number(#): "))
+        horse = int(input('Horse Power(#): '))
+        print("\n--------------------------------------------\n")
+
+        seats = int(input("Number of seats in your car: "))
+        print("\n--------------------------------------------\n")
+        
+        ch = input("Are you sure that the above details are correct?(y/n) ")
+        print("\n--------------------------------------------\n")
+        
+        if(ch.lower() == "y"):
+            sql = 'insert into car_desc values(%s,%s,%s,%s,%s,%s,%s,%s)'
+            data = (fname,lname,dob,padd,username.lower(),ph,al,doc)
+            cur1.execute(sql,data)
+            mycon.commit()
 
     except:
         print("Wrong Input, Try again")

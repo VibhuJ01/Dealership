@@ -39,8 +39,7 @@ Mileage float(5,2),
 Engine_number int,
 Horse_Power int,
 Seats int not null,
-Description varchar(300) not null,
-Mess varchar(300) not null
+Description varchar(300) not null
 );'''
     cur1.execute(sql)
     mycon.commit() 

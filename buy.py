@@ -17,7 +17,7 @@ def buy():
         lprice = float(input("whats your lower budget? "))
         print("\n--------------------------------------------\n")
         
-        seats = int(input("Preferred seat no? "))
+        seats = int(input("Preferred seat no: "))
 
         print("\n--------------------------------------------\n")
         print("Fuel type availabe:")
@@ -25,14 +25,14 @@ def buy():
         print("2. Diesel")
         print("3. CNG")
         print("4. Any")
-        fuel = int(input("Preferred fuel type? "))
+        fuel = int(input("Preferred fuel type: "))
         print("\n--------------------------------------------\n")
         
         print("Transmission type availabe:")
         print("1. Automatic")
         print("2. Manual")
         print("3. Any")
-        trans = int(input("Preferred fuel type? "))
+        trans = int(input("Preferred fuel type: "))
 
     except:
         print("\n--------------------------------------------\n")
