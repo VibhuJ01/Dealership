@@ -5,8 +5,6 @@
 [
 
 Sell:
-Seller: Full Name, number, permanent adress, DOB, email id, alternate contact, (adhaar, pan, passport, DL)document
-
 Car verification: RC number, insurance(applied date and expire date), pollution(applied date and expire date), type of seller(first or second),document
 
 Description of car:
@@ -20,11 +18,15 @@ Mileage
 Seats
 Engine
 Horse Power 
+
+df.loc[len(df.index)] = ['Amy', 89, 93] 
 ]
 
 
 (
-buy a new car / message seller
+BUY:
+Talk to seller
+
 message seller:
 number
 make an offer
@@ -34,11 +36,10 @@ Car image Scrapping
 
 Manager:
 gaadi verification
-
 )
 
 {
-Buy:
+BUY:
 nessesary details
 price range
 seats(less than 5 or more than 5)
@@ -49,14 +50,18 @@ mileage
 above what year
 km driven
 
-Login:
+
+LOGIN:
 change password
 
-Errors:
-print before picking
 
+ERRORS:
+print before picking
 New password ka verification karna hai
 check for empty df after filters
 
+
+SELL:
 RESGISTERED OR DO YOU WANT TO REGISTER?
+Seller: Full Name, number, permanent adress, DOB, email id, alternate contact, (adhaar, pan, passport, DL)document
 }

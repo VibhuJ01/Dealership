@@ -76,7 +76,6 @@ def fil(df):
     print("2. Apply Filters")
     print("3. Back")
     ch = input("What do you wanna do? ")
-    print("\n--------------------------------------------\n")
         
     if(ch == "1"):
         printing(df)

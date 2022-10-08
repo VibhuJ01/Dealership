@@ -22,12 +22,31 @@ p_address varchar(100) not null,
 username varchar(30)primary key not null,
 ph_no int not null,
 al_no int not null,
-doc_no int );'''
+doc_no int not null );'''
     cur1.execute(sql)
     mycon.commit()
-    
 
-seller()
+
+def car():
+    sql = '''create table Car_Desc(
+name varchar(30) not null,
+price float(5,2) not null,
+year int not null,
+odo int not null, 
+fuel varchar(10) not null,
+transmission varchar(10) not null,
+Mileage float(5,2),
+Engine_number int,
+Horse_Power int,
+Seats int not null,
+Description varchar(300) not null,
+Mess varchar(300) not null
+);'''
+    cur1.execute(sql)
+    mycon.commit() 
+
+car()
+
 cur1.close()
 mycon.close()
 print("Done")

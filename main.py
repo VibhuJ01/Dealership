@@ -2,7 +2,6 @@ from signup import signup
 from login import login
 
 def main():
-    print("\n--------------------------------------------\n")
     print("Welcome to Dealership")
     print("We will help you select perfect car")
     print("As per your needs")
@@ -20,6 +19,7 @@ def main():
     elif(ch == "2"):
         print("1. Signup")
         print("2. Login")
+        print("3. Back")
         ch2 = input("What do you want to do?: ")
         print("\n--------------------------------------------\n")
 
@@ -28,6 +28,9 @@ def main():
             
         elif(ch2 == "2"):
             login()
+
+        elif(ch2 == '3'):
+            pass
 
         else:
             print("Wrong Input")  

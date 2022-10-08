@@ -33,8 +33,8 @@ def login():
     
 def afterlogin(username,password):
 
-    print("1. Buy a car")
-    print("2. Sell a car")
+    print("1. Buyer")
+    print("2. Seller")
     print("3. Change Password")
     print("4. Logout")
     ch = input("What do you want to do? ")

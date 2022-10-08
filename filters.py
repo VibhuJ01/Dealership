@@ -2,6 +2,7 @@ from tabulate import tabulate
 import pandas as pd
     
 def filters(df):
+    print("\n--------------------------------------------\n")
     print("We provide the following Filters:")
     print("1. Minimum Mileage")
     print("2. Model Year")
@@ -27,13 +28,12 @@ def filters(df):
 
     else:
         print("Wrong Input")
-        print("\n--------------------------------------------\n")  
         df = filters(df)
+        
 
     if(len(df) == 0):
             print("\n--------------------------------------------\n")
             print("We dont have cars of that specification")
-            print("\n--------------------------------------------\n")
             return df
         
     printing(df)
