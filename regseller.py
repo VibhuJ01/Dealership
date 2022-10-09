@@ -27,8 +27,6 @@ def reg_seller():
 def sell():
 
     print("Please fill the required details of your car")
-    print("Note:- '#' means not mandotory to fill if you want")
-    print("you can leave them empty by hitting enter to skip them")
     print("\n--------------------------------------------\n")
 
     try:
@@ -62,6 +60,7 @@ def sell():
             fuel = 'CNG'
 
         else:
+            print("\n--------------------------------------------\n")
             print("Wrong Input, Try again")
             print("\n--------------------------------------------\n")
             return
@@ -79,36 +78,41 @@ def sell():
             trans = 'Manual'
 
         else:
+            print("\n--------------------------------------------\n")
             print("Wrong Input, Try again")
             print("\n--------------------------------------------\n")
             return
         print("\n--------------------------------------------\n")
 
-        mil = float(input("Average Mileage of your car(#): "))
-        engine = int(input("Engine Number(#): "))
-        horse = int(input('Horse Power(#): '))
+        mil = float(input("Average Mileage of your car: "))
+        engine = input("Engine Number: ")
+        horse = input('Horse Power: ')
         print("\n--------------------------------------------\n")
 
         seats = int(input("Number of seats in your car: "))
         print("\n--------------------------------------------\n")
-        
-        ch = input("Are you sure that the above details are correct?(y/n) ")
+
+        descr = input("Description of the Car: ")
         print("\n--------------------------------------------\n")
         
+        ch = input("Are you sure that the above details are correct?(y/n) ")
         if(ch.lower() == "y"):
-            sql = 'insert into car_desc values(%s,%s,%s,%s,%s,%s,%s,%s)'
-            data = (fname,lname,dob,padd,username.lower(),ph,al,doc)
+            sql = 'insert into car_desc values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+            data = (name,price,year,odo,fuel,trans,mil,engine,horse,seats,descr)
             cur1.execute(sql,data)
             mycon.commit()
 
+    
     except:
+        print("\n--------------------------------------------\n")
         print("Wrong Input, Try again")
         print("\n--------------------------------------------\n")
         return
 
     else:
-        pass
-
+        print("\n--------------------------------------------\n")
+        print("Car Registration Complete")
+        print("\n--------------------------------------------\n") 
 
 
         

@@ -7,17 +7,7 @@
 Sell:
 Car verification: RC number, insurance(applied date and expire date), pollution(applied date and expire date), type of seller(first or second),document
 
-Description of car:
-Message from seller
-name of car with model no 
-year of purchased 
-odometer driven 
-fuel type
-transmission_type
-Mileage
-Seats
-Engine
-Horse Power 
+see status of my car, (aprooved, sold etc)
 
 df.loc[len(df.index)] = ['Amy', 89, 93] 
 ]
@@ -25,9 +15,7 @@ df.loc[len(df.index)] = ['Amy', 89, 93]
 
 (
 BUY:
-Talk to seller
-
-message seller:
+message seller-
 number
 make an offer
 location
@@ -36,7 +24,10 @@ Car image Scrapping
 
 Manager:
 gaadi verification
+Add a new manager
 )
+
+
 
 {
 BUY:
@@ -49,6 +40,9 @@ Filters:
 mileage 
 above what year
 km driven
+
+talk to seller
+
 
 
 LOGIN:
@@ -64,4 +58,18 @@ check for empty df after filters
 SELL:
 RESGISTERED OR DO YOU WANT TO REGISTER?
 Seller: Full Name, number, permanent adress, DOB, email id, alternate contact, (adhaar, pan, passport, DL)document
+
+Description of car:
+Message from seller
+name of car with model no 
+year of purchased 
+odometer driven 
+fuel type
+transmission_type
+Mileage
+Seats
+Engine
+Horse Power 
 }
+
+

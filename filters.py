@@ -76,4 +76,4 @@ def pick(df):
 def printing(df):
     print("\n--------------------------------------------\n")
     print(tabulate(df, headers = 'keys', tablefmt = 'pretty', showindex = False))
-    print("\n--------------------------------------------\n")
+

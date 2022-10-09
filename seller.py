@@ -61,7 +61,7 @@ def register(username):
         return
 
     else:
-        print("Registration Complete")
+        print("Seller Registration Complete")
         print("\n--------------------------------------------\n")   
     
     

@@ -3,7 +3,31 @@ import pandas as pd
 from filters import filters
 from filters import pick
 
+
+
 def buy():
+    print("1. Buy a Car")
+    print("2. Talk to Sellers")
+    print("3. Back")
+    ch = input("What do you want to do?: ")
+    print("\n--------------------------------------------\n")
+    
+    if(ch == '1'):
+        buying()
+
+    elif(ch == '2'):
+        pass
+
+    elif(ch == '3'):        
+        return
+    
+    else:
+        print("Wrong Input")
+        print("\n--------------------------------------------\n")
+    
+    buy()
+
+def buying():
     df = pd.read_csv("dataset.csv")
     df = df.dropna()
     convert_dict = {'Mileage': float}

@@ -2,6 +2,7 @@ from signup import signup
 from login import login
 
 def main():
+    print("\n--------------------------------------------\n")
     print("Welcome to Dealership")
     print("We will help you select perfect car")
     print("As per your needs")
@@ -40,7 +41,7 @@ def main():
     elif(ch == "3"):
         print("Thank you for Visiting Dealership")
         print("Have a Nice Day")
-        print("\n--------------------------------------------\n")
+        print("\n--------------------------------------------")
         return
         
     else:
