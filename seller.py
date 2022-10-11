@@ -18,30 +18,50 @@ def seller(username):
         register(username)
 
     else:
-        reg_seller()
+        reg_seller(username)
 
 
 def register(username):
 
-    print("To become a seller at our Delearship,")
+    print("To become a Seller at our Delearship,")
     print("First you need to Register yourself")
     print("\n--------------------------------------------\n")
     
     try:  
-        fname = input("Enter you first name: ")
-        lname = input("Enter you last  name: ")
+        fname = input("Enter you First Name: ")
+        lname = input("Enter you Last  Name: ")
         print("\n--------------------------------------------\n")
         
-        dob = input("Enter you DOB(xx/xx/xxxx): ")
+        dob = input("Enter your DOB(xx/xx/xxxx): ")
         print("\n--------------------------------------------\n")
         
-        padd = input("Enter you permenant address: ")
+        padd = input("Enter you Permenant Address: ")
         print("\n--------------------------------------------\n")
         
         ph = int(input("Enter you Contact Number: "))
         al = int(input("Enter you Alternate Contact Number: "))
         print("\n--------------------------------------------\n")
-        
+
+        print("1. Adhaar")
+        print("2. Driving Licence")
+        print("3. Other")
+        docn = int(input("Which Govt. Document you want to Register? "))
+
+        if(docn == 1):
+            docn = "Adhaar"
+
+        elif(docn == 2):
+            docn = 'Driving Licence'
+
+        elif(docn == 3):
+            docn = input("Name of Govt. Document you want to Register: ")
+            
+        else:
+            print("Wrong Input, Try Again")
+            print("\n--------------------------------------------\n")
+            return
+
+        print("\n--------------------------------------------\n")
         doc = int(input("Enter your Govt. Document Number: "))
         print("\n--------------------------------------------\n")
         
@@ -49,19 +69,20 @@ def register(username):
         print("\n--------------------------------------------\n")
         
         if(ch.lower() == "y"):
-            sql = 'insert into seller values(%s,%s,%s,%s,%s,%s,%s,%s)'
-            data = (fname,lname,dob,padd,username.lower(),ph,al,doc)
+            sql = 'insert into seller values(%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+            data = (fname,lname,dob,padd,username.lower(),ph,al,docn,doc)
             cur1.execute(sql,data)
             mycon.commit()
 
     except:
         
-        print("Wrong Input, Try again")
+        print("Wrong Input, Try Again")
         print("\n--------------------------------------------\n")
         return
 
     else:
         print("Seller Registration Complete")
-        print("\n--------------------------------------------\n")   
+        print("\n--------------------------------------------\n")
+        reg_seller()
     
     

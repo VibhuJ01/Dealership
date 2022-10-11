@@ -37,7 +37,7 @@ def signup():
     else:
         print("Email or Password is not valid")
         print("\n--------------------------------------------\n")
-        try1 = input("Do you want to sign up again?(y/n) ")
+        try1 = input("Do you want to Sign Up again?(y/n) ")
         print("\n--------------------------------------------\n")
         if(try1.lower() == 'y'):
             signup()

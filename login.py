@@ -7,8 +7,8 @@ cur1 = mycon.cursor()
 
 
 def login():
-    username = input("Enter your username:\t")
-    password = input("Enter your password:\t")
+    username = input("Enter your Username:\t")
+    password = input("Enter your Password:\t")
     print("\n--------------------------------------------\n")
     sql = "select * from login"
     cur1.execute(sql)
@@ -16,14 +16,14 @@ def login():
     flag = 0
     for i in result:
         if(i[2] == username.lower() and i[3] == password):
-            print('Login is succesful')
+            print('Login is Succesful')
             print("\n--------------------------------------------\n")
             flag = 1
             afterlogin(username,password)
 
             
     if(flag != 1):
-        print("Invalid username or password")
+        print("Invalid Username or Password")
         print("\n--------------------------------------------\n")
         
         ch5 = input("Do you want to login again?(y/n) ")
@@ -60,9 +60,9 @@ def afterlogin(username,password):
 
 def changepass(username,password):
     
-    oldpass = input("Enter old password:\t")
+    oldpass = input("Enter Old Password:\t")
     if(oldpass == password):
-        newpass = input("Enter new password:\t")
+        newpass = input("Enter New Password:\t")
         print("Password should have 1 uppercase")
         print("\n--------------------------------------------\n")
         print("Validating Password....\n")
@@ -76,17 +76,17 @@ def changepass(username,password):
             cur1.execute(sql,data)
             mycon.commit()
             print("\n--------------------------------------------\n")
-            print("Changing password....")
-            print("Your new password is ",newpass)
+            print("Changing Password....")
+            print("Your New Password is ",newpass)
             print("\n--------------------------------------------\n")
 
         else:
-            print("New Password is not valid")
+            print("New Password is not Valid")
             print("\n--------------------------------------------\n")
             
     else:
         print("\n--------------------------------------------\n")
-        print("Your Old password did not match")
+        print("Your Old password did not Match")
         print("\n--------------------------------------------\n")
         ch = input("Do you want to try again?(y/n) ")
         print("\n--------------------------------------------\n")

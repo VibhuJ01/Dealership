@@ -33,7 +33,7 @@ def filters(df):
 
     if(len(df) == 0):
             print("\n--------------------------------------------\n")
-            print("We dont have cars of that specification")
+            print("We dont have Cars of that Specification")
             return df
         
     printing(df)
@@ -43,7 +43,7 @@ def filters(df):
 def pick(df):
 
     try:
-        ch = int(input("Serial Id of car of your choice: "))
+        ch = int(input("Serial Id of Car of your Choice: "))
 
     except:
         print("\n--------------------------------------------\n")
@@ -57,7 +57,7 @@ def pick(df):
             print("\n--------------------------------------------\n")
             print(df.loc[ch])
             print("\n--------------------------------------------\n")
-            ch1 = input("Do wanna buy this car?(y/n) ")
+            ch1 = input("Do wanna buy this Car?(y/n) ")
             print("\n--------------------------------------------\n")
             if(ch1.lower() == "y"):
                 a = df.loc[ch]

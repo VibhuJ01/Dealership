@@ -1,14 +1,14 @@
 from signup import signup
 from login import login
 
+print("\n--------------------------------------------\n")
 def main():
-    print("\n--------------------------------------------\n")
     print("Welcome to Dealership")
-    print("We will help you select perfect car")
-    print("As per your needs")
+    print("We will help you select Perfect Car")
+    print("As per your Needs")
     print("\n--------------------------------------------\n")
     
-    print("1. Manager")
+    print("1. Staff Member")
     print("2. Customer")
     print("3. Exit")
     ch = input("Login as: ")

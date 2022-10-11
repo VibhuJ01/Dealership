@@ -1,21 +1,31 @@
 import mysql.connector as ms
 mycon=ms.connect(host="localhost",user="root",db="autos",passwd="vibhu")
 cur1 = mycon.cursor()
+from car import car_ver
 
-def reg_seller():
+
+def reg_seller(username):
+    sql = "select * from car_desc"
+    cur1.execute(sql)
+    result = cur1.fetchall()
+    s = len(result)
     print("1. Sell a Car")
     print("2. Talk to Buyers")
-    print("3. Back")
+    print("3. Verify Car")
+    print("4. Back")
     ch = input("What do you want to do?: ")
     print("\n--------------------------------------------\n")
     
     if(ch == '1'):
-        sell()
+        sell(username,s)
 
     elif(ch == '2'):
         pass
 
     elif(ch == '3'):        
+        car_ver(username,s)
+    
+    elif(ch == '4'):
         return
     
     else:
@@ -24,7 +34,7 @@ def reg_seller():
     
     reg_seller()
     
-def sell():
+def sell(username,s):
 
     print("Please fill the required details of your car")
     print("\n--------------------------------------------\n")
@@ -85,8 +95,6 @@ def sell():
         print("\n--------------------------------------------\n")
 
         mil = float(input("Average Mileage of your car: "))
-        engine = input("Engine Number: ")
-        horse = input('Horse Power: ')
         print("\n--------------------------------------------\n")
 
         seats = int(input("Number of seats in your car: "))
@@ -98,11 +106,10 @@ def sell():
         ch = input("Are you sure that the above details are correct?(y/n) ")
         if(ch.lower() == "y"):
             sql = 'insert into car_desc values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
-            data = (name,price,year,odo,fuel,trans,mil,engine,horse,seats,descr)
+            data = (s,name,price,year,odo,fuel,trans,mil,seats,descr,"NO")
             cur1.execute(sql,data)
             mycon.commit()
 
-    
     except:
         print("\n--------------------------------------------\n")
         print("Wrong Input, Try again")
@@ -113,9 +120,6 @@ def sell():
         print("\n--------------------------------------------\n")
         print("Car Registration Complete")
         print("\n--------------------------------------------\n") 
-
-
-        
+        car_ver(username,s) 
     
-        
         

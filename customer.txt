@@ -3,9 +3,8 @@
 () - Future plans
 
 [
-
-Sell:
-Car verification: RC number, insurance(applied date and expire date), pollution(applied date and expire date), type of seller(first or second),document
+SELL:
+Car verification: RC number, insurance(applied date and expire date), pollution(applied date and expire date), type of seller(first or second)
 
 see status of my car, (aprooved, sold etc)
 
@@ -13,7 +12,13 @@ df.loc[len(df.index)] = ['Amy', 89, 93]
 ]
 
 
+
 (
+How may i help you?
+:- Report an issue
+:- Ask a question
+:- Report a bug
+
 BUY:
 message seller-
 number
@@ -22,9 +27,10 @@ location
 custom
 Car image Scrapping
 
-Manager:
+Staff:
 gaadi verification
 Add a new manager
+answer queries
 )
 
 
@@ -40,24 +46,18 @@ Filters:
 mileage 
 above what year
 km driven
-
-talk to seller
-
-
+:-talk to seller
 
 LOGIN:
 change password
 
-
-ERRORS:
-print before picking
-New password ka verification karna hai
-check for empty df after filters
-
-
 SELL:
 RESGISTERED OR DO YOU WANT TO REGISTER?
 Seller: Full Name, number, permanent adress, DOB, email id, alternate contact, (adhaar, pan, passport, DL)document
+
+Seller Registeration:
+Adhaar, dl, other
+
 
 Description of car:
 Message from seller
@@ -70,6 +70,15 @@ Mileage
 Seats
 Engine
 Horse Power 
+
+CHANGES:
+BUY:
+Not sure in price and no of seats
+Remove horse power and engine number
+remove engine
+New password ka verification karna hai
+print before picking
+check for empty df after filters
 }
 
 

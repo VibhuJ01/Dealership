@@ -17,7 +17,8 @@ def buy():
 
     elif(ch == '2'):
         pass
-
+        #Talk to sellers wala ayega
+    
     elif(ch == '3'):        
         return
     
@@ -31,32 +32,61 @@ def buying():
     df = pd.read_csv("dataset.csv")
     df = df.dropna()
     convert_dict = {'Mileage': float}
- 
     df = df.astype(convert_dict)
     
     #Input->
     try:
-        print("Enter Price in Lakhs")
-        uprice = float(input("whats your upper budget? "))
-        lprice = float(input("whats your lower budget? "))
+        print('1. Enter Budget')
+        print('2. Any')
+        ch = input("What do you want to do?: ")
         print("\n--------------------------------------------\n")
         
-        seats = int(input("Preferred seat no: "))
+        if(ch == '1'):
+            print("Enter Price in Lakhs")
+            uprice = float(input("What's your Upper Budget? "))
+            lprice = float(input("What's your Lower Budget? "))
+            print("\n--------------------------------------------\n")
+            df = df.loc[df['price'] <= uprice]
+            df = df.loc[df['price'] >= lprice]
 
+        elif(ch == '2'):
+            pass
+        else:
+            print("Wrong Input")
+            print("\n--------------------------------------------\n")
+            return
+
+        print('1. Enter Seat Number')
+        print('2. Any')
+        ch = input("What do you want to do?: ")
+        
+        if(ch == '1'):
+            print("\n--------------------------------------------\n")
+            seats = int(input("Preferred Seat Number: "))        
+            df = df.loc[df['Seats'] == seats]
+
+        elif(ch == '2'):
+            pass
+        else:
+            print("\n--------------------------------------------\n")
+            print("Wrong Input")
+            print("\n--------------------------------------------\n")
+            return
+        
         print("\n--------------------------------------------\n")
-        print("Fuel type availabe:")
+        print("Fuel Type Availabe:")
         print("1. Petrol")
         print("2. Diesel")
         print("3. CNG")
         print("4. Any")
-        fuel = int(input("Preferred fuel type: "))
+        fuel = int(input("Preferred Fuel Type: "))
         print("\n--------------------------------------------\n")
         
-        print("Transmission type availabe:")
+        print("Transmission Type Availabe:")
         print("1. Automatic")
         print("2. Manual")
         print("3. Any")
-        trans = int(input("Preferred fuel type: "))
+        trans = int(input("Preferred Transmission Type: "))
 
     except:
         print("\n--------------------------------------------\n")
@@ -66,10 +96,6 @@ def buying():
 
     else:
         #Processing->
-        df = df.loc[df['price'] <= uprice]
-        df = df.loc[df['price'] >= lprice]
-        df = df.loc[df['Seats'] == seats]
-
         if(fuel == 1):
             df = df.loc[df['fuel'] == 'Petrol']
             
@@ -87,7 +113,7 @@ def buying():
 
         if(len(df) == 0):
             print("\n--------------------------------------------\n")
-            print("We dont have cars of that specification")
+            print("We dont have Cars of that Specification")
             print("\n--------------------------------------------\n")
             return
     
