@@ -10,8 +10,8 @@ def reg_seller(username):
     result = cur1.fetchall()
     s = len(result)
     print("1. Sell a Car")
-    print("2. Talk to Buyers")
-    print("3. Verify Car")
+    print("2. Verify Car")
+    print("3. Talk to Buyers")
     print("4. Back")
     ch = input("What do you want to do?: ")
     print("\n--------------------------------------------\n")
@@ -19,12 +19,12 @@ def reg_seller(username):
     if(ch == '1'):
         sell(username,s)
 
-    elif(ch == '2'):
+    elif(ch == '2'):        
+        car_ver(username)
+     
+    elif(ch == '3'):
         pass
-
-    elif(ch == '3'):        
-        car_ver(username,s)
-    
+  
     elif(ch == '4'):
         return
     
@@ -32,7 +32,7 @@ def reg_seller(username):
         print("Wrong Input")
         print("\n--------------------------------------------\n")
     
-    reg_seller()
+    reg_seller(username)
     
 def sell(username,s):
 
@@ -105,8 +105,8 @@ def sell(username,s):
         
         ch = input("Are you sure that the above details are correct?(y/n) ")
         if(ch.lower() == "y"):
-            sql = 'insert into car_desc values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
-            data = (s,name,price,year,odo,fuel,trans,mil,seats,descr,"NO")
+            sql = 'insert into car_desc values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+            data = (s,username.lower(),name,price,year,odo,fuel,trans,mil,seats,descr,"NO")
             cur1.execute(sql,data)
             mycon.commit()
 
@@ -120,6 +120,6 @@ def sell(username,s):
         print("\n--------------------------------------------\n")
         print("Car Registration Complete")
         print("\n--------------------------------------------\n") 
-        car_ver(username,s) 
+        car_ver(username) 
     
         

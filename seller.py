@@ -83,6 +83,6 @@ def register(username):
     else:
         print("Seller Registration Complete")
         print("\n--------------------------------------------\n")
-        reg_seller()
+        reg_seller(username)
     
     

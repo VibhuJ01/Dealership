@@ -31,6 +31,7 @@ doc_no int not null );'''
 def car_desc():
     sql = '''create table Car_Desc(
 Serial_NO int primary key,
+Username varchar(30) not null,
 Name varchar(30) not null,
 Price float(5,2) not null,
 Year int not null,
@@ -48,7 +49,8 @@ Verified varchar(3) not null
 
 def car_ver():
     sql = '''create table Car_ver(
-RC_No int primary key,
+Serial_No int primary key,
+RC_No int Not Null,
 Insurance_No int not null,
 Insurance_Exp varchar(10) not null,
 Pollution_Exp varchar(10) not null,

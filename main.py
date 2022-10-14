@@ -35,7 +35,7 @@ def main():
 
         else:
             print("Wrong Input")  
-
+            print("\n--------------------------------------------\n")
        
 
     elif(ch == "3"):
@@ -46,6 +46,7 @@ def main():
         
     else:
         print("Wrong Input")
+        print("\n--------------------------------------------\n")
         
     main()
     
