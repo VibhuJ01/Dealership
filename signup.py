@@ -31,6 +31,7 @@ def signup():
         print("Signup Complete")
         print("\n--------------------------------------------\n")
         ch3 = input("Do you want to login?(y/n) ")
+        print("\n--------------------------------------------\n")
         if(ch3.lower() == 'y'):
             login()
             
@@ -51,5 +52,3 @@ def email_validation():
             a = 1
             break    
     return a
-
-

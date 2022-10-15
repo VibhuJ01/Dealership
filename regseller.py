@@ -122,4 +122,3 @@ def sell(username,s):
         print("\n--------------------------------------------\n") 
         car_ver(username) 
     
-        

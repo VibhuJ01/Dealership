@@ -85,4 +85,3 @@ def register(username):
         print("\n--------------------------------------------\n")
         reg_seller(username)
     
-    
