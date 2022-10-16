@@ -3,11 +3,10 @@
 () - Future plans
 
 [
-SELL:
-Car verification: RC number, insurance(applied date and expire date), pollution(applied date and expire date), type of seller(first or second)
-
-see status of my car, (aprooved, sold etc)
-
+Staff:
+gaadi verification
+Add a new staff
+answer queries
 df.loc[len(df.index)] = ['Amy', 89, 93] 
 ]
 
@@ -19,18 +18,8 @@ How may i help you?
 :- Ask a question
 :- Report a bug
 
-BUY:
-message seller-
-number
-make an offer
-location
-custom
-Car image Scrapping
-
-Staff:
-gaadi verification
-Add a new manager
-answer queries
+BUY/SELL:
+message seller/buyer
 )
 
 
@@ -42,6 +31,7 @@ price range
 seats(less than 5 or more than 5)
 fuel type(any)
 transmission type(any)
+
 Filters:
 mileage 
 above what year
@@ -58,6 +48,11 @@ Seller: Full Name, number, permanent adress, DOB, email id, alternate contact, (
 Seller Registeration:
 Adhaar, dl, other
 
+Car verification: 
+RC number, insurance(applied date and expire date), pollution(applied date and expire date), type of seller(first or second)
+see details of the car(aprooved, sold etc)
+Make changes in the details of the cars
+mark your car sold
 
 Description of car:
 Message from seller

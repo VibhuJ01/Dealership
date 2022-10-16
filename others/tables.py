@@ -41,7 +41,9 @@ Transmission varchar(10) not null,
 Mileage float(5,2),
 Seats int not null,
 Description varchar(300) not null,
-Verified varchar(3) not null
+Verified varchar(3) not null,
+On_Sale varchar(3) not null,
+Sold varchar(3) not null
 );'''
     cur1.execute(sql)
     mycon.commit() 

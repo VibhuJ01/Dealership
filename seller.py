@@ -1,7 +1,7 @@
 import mysql.connector as ms
 mycon = ms.connect(host="localhost",user="root",db="autos",passwd="vibhu")
 cur1 = mycon.cursor()
-from regseller import reg_seller
+from reg_seller import reg_seller
 
 def seller(username):
 
