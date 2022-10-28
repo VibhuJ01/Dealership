@@ -1,6 +1,8 @@
 from buy import buy
 from seller import seller
 from manager import manager
+from query import query
+
 import mysql.connector as ms
 mycon = ms.connect(host="localhost",user="root",db="autos",passwd="vibhu")
 cur1 = mycon.cursor()
@@ -38,8 +40,9 @@ def afterlogin(username,password):
 
     print("1. Buyer")
     print("2. Seller")
-    print("3. Change Password")
-    print("4. Logout")
+    print('3. Queries/Complaints')
+    print("4. Change Password")
+    print("5. Logout")
     ch = input("What do you want to do? ")
     print("\n--------------------------------------------\n")
 
@@ -49,10 +52,13 @@ def afterlogin(username,password):
     elif(ch == "2"):
         seller(username)
 
-    elif(ch == "3"):
-        changepass(username,password)
+    elif(ch == '3'):
+        query(username)
         
     elif(ch == "4"):
+        changepass(username,password)
+        
+    elif(ch == "5"):
         return
         
     else:

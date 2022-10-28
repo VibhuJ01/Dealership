@@ -22,7 +22,8 @@ def manager(username,password):
             print('3. Remove a Manager')
             print('4. Diplay list of staff Members')
             print('5. Answer Queries')
-            print('6. Back')
+            print('6. See all the Queries')
+            print('7. Back')
             ch2 = input("What do you want to do? ")
             print("\n--------------------------------------------\n")
 
@@ -41,9 +42,14 @@ def manager(username,password):
                 display()
             
             elif(ch2 == "5"):
-                pass
+                ser,i = displayA(0)
+                if(ser != -1):
+                    answer(ser,i)
 
             elif(ch2 == '6'):
+                displayA(1)
+                
+            elif(ch2 == '7'):
                 break
 
             else:
@@ -125,3 +131,70 @@ def display():
     print(tabulate(l, headers = keys, tablefmt = 'pretty',showindex = False))
     print("\n--------------------------------------------\n")
 
+
+def displayA(a):
+    sql = 'select * from queries'
+    cur1.execute(sql)
+    result = cur1.fetchall()
+
+    if(a == 1):
+        print("All the Available Queries/Complaints->\n")
+        keys = ['Serial_No','Username','Type','Subject','Query','Answer','Feedback']
+        print(tabulate(result, headers = keys, tablefmt = 'pretty',showindex = False))
+        print("\n--------------------------------------------\n")
+        
+    elif(a == 0):
+        l = []
+        for i in result:
+            if(i[5] == 'We will reply soon.'):
+                l.append(i)
+
+        if(len(l) == 0):
+            print('No Queries Available')
+            print("\n--------------------------------------------\n")
+            return -1,0
+        
+        print("All the Available Queries/Complaints->\n")
+        keys = ['Serial_No','Username','Type','Subject','Query','Answer','Feedback']
+        print(tabulate(l, headers = keys, tablefmt = 'pretty',showindex = False))
+        print("\n--------------------------------------------\n")
+
+        try:
+            ser = int(input("Enter the Serail Number of Query: "))
+            print("\n--------------------------------------------\n")
+            
+            for i in l:
+                if(i[0] == ser):
+                    return ser,i
+            else:
+                print('Serial Number is not Available')
+                print("\n--------------------------------------------\n")
+                return -1,0
+                
+        except:
+            print("\n--------------------------------------------\n")
+            print("Wrong Input")
+            print("\n--------------------------------------------\n")
+
+    
+def answer(ser,i):
+    l = []
+    l.append(i)
+    keys = ['Serial_No','Username','Type','Subject','Query','Answer','Feedback']
+    print(tabulate(l, headers = keys, tablefmt = 'pretty',showindex = False))
+    print("\n--------------------------------------------\n")
+    
+    ans = input("Enter your Reply: ")
+    
+    sql = '''update queries
+             set answer = %s
+             where serial_no = %s'''
+
+    data = (ans,i[0])
+    cur1.execute(sql,data)
+    mycon.commit()
+
+    print("\n--------------------------------------------\n")
+    print("The Question is Answered Successfully")
+    print("\n--------------------------------------------\n")
+    

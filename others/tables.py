@@ -66,8 +66,10 @@ def car_ver():
 
 def queries():
     sql = '''create table queries(
-            serial_no int primary key,
+            serial_no int primary key auto_increment,
             username varchar(30) not null,
+            type varchar(15) not null,
+            subject varchar(40) not null,
             query varchar(250),
             answer varchar(250),
             feedback int
