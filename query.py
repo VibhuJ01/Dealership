@@ -6,9 +6,8 @@ cur1 = mycon.cursor()
 
 
 def query(username):
-
     print('1. Create a Query / Ask Question')
-    print('2. Check Answers to you Queries')
+    print('2. Check your Queries')
     print('3. Give Feedbacx')
     print('4. Back')
     ch = input("What do you want to do? ")
@@ -33,8 +32,7 @@ def query(username):
     query(username)
 
 
-def createQ(username):
-    
+def createQ(username):   
     print('1. Query')
     print('2. Complaint')
     type = input("What is your Type of problem? ")
@@ -72,11 +70,71 @@ def ansQ(username):
     for i in result:
         if(i[5] != 'We will reply soon.' and i[1] == username):
             l.append(i)
-        
+    
     print("All Your Queries/Complaints->\n")
     keys = ['Serial_No','Username','Type','Subject','Query','Answer','Feedback']
     print(tabulate(l, headers = keys, tablefmt = 'pretty',showindex = False))
     print("\n--------------------------------------------\n")
     
-def feedback():
-    pass
+def feedback(username):
+    sql = 'select * from queries'
+    cur1.execute(sql)
+    result = cur1.fetchall()
+    l = []
+    
+    for i in result:
+        if(i[5] != 'We will reply soon.' and i[1] == username and i[6] == None):
+            l.append(i)
+
+    if(len(l) == 0):
+        print('No Queries Available')
+        print("\n--------------------------------------------\n")
+        return
+    
+    print("All Your Queries/Complaints->\n")
+    keys = ['Serial_No','Username','Type','Subject','Query','Answer','Feedback']
+    print(tabulate(l, headers = keys, tablefmt = 'pretty',showindex = False))
+    print("\n--------------------------------------------\n")
+
+    try:
+        ser = int(input("Enter the Serail Number of Query: "))
+        print("\n--------------------------------------------\n")
+        
+        for i in l:
+            if(i[0] == ser):
+                break
+            
+        else:
+            print('Serial Number is not Available')
+            print("\n--------------------------------------------\n")
+            return
+            
+    except:
+        print("\n--------------------------------------------\n")
+        print("Wrong Input")
+        print("\n--------------------------------------------\n")
+        return
+
+    else:
+        try:
+            feed = int(input("Enter Feedback(1-10): "))
+
+        except:
+            print("\n--------------------------------------------\n")
+            print("Wrong Input")
+            print("\n--------------------------------------------\n")
+            return
+
+        else:
+
+            sql = '''update queries
+                     set feedback = %s
+                     where serial_no = %s'''
+
+            data = (feed,ser)
+            cur1.execute(sql,data)
+            mycon.commit()
+            
+            print("\n--------------------------------------------\n")
+            print('Feedback Successfully Given')
+            print("\n--------------------------------------------\n")
