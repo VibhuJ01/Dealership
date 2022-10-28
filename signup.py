@@ -6,7 +6,7 @@ mycon = ms.connect(host="localhost",user="root",db="autos",passwd="vibhu")
 cur1 = mycon.cursor()
 
 
-def signup():
+def signup(a):
     global username,password
     
     fname = input("Enter your First Name :\t")
@@ -24,8 +24,13 @@ def signup():
 
 
     if (res == 1 and res2 == 1):
-        sql = 'insert into login values(%s,%s,%s,%s)'
-        data = (fname,lname,username.lower(),password)
+        sql = 'insert into login values(%s,%s,%s,%s,%s)'
+        if(a == 0):
+            data = (fname,lname,username.lower(),password,'NO')
+
+        else:
+            data = (fname,lname,username.lower(),password,'YES')
+            
         cur1.execute(sql,data)
         mycon.commit()
         print("Signup Complete")
@@ -41,7 +46,7 @@ def signup():
         try1 = input("Do you want to Sign Up again?(y/n) ")
         print("\n--------------------------------------------\n")
         if(try1.lower() == 'y'):
-            signup()
+            signup(a)
 
 
 def email_validation():

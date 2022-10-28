@@ -4,24 +4,6 @@ cur1 = mycon.cursor()
 from tabulate import tabulate
 
 def car_ver(username):
-    
-    sql = "select * from car_desc"
-    cur1.execute(sql)
-    result = cur1.fetchall()
-    l = []
-    for i in result:
-        if(i[1] == username.lower() and i[11] == "NO"):
-            l.append(i)
-
-    if(len(l) == 0):
-        print("You have No Pending Unverified Car")
-        print("\n--------------------------------------------\n")
-        return
-    
-    print("All of your Unverified Cars are Listed Below:\n")
-    keys = ['Serial No', 'Username', 'Name','Price','Model','Odometer','Fuel','Transmission','Mileage','Seats','Description','Verified',"On_sale",'Sold']
-    print(tabulate(l, headers = keys, tablefmt = 'pretty',showindex = False))
-    print("\n--------------------------------------------\n")
 
     ch = input('Do you want to Verify any Car now?(y/n) ')
     if(ch == 'y'):

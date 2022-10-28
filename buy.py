@@ -2,7 +2,7 @@ from tabulate import tabulate
 import pandas as pd
 from filters import filters
 from filters import pick
-
+from sale import integrate
 
 
 def buy():
@@ -29,10 +29,7 @@ def buy():
     buy()
 
 def buying():
-    df = pd.read_csv("dataset.csv")
-    df = df.dropna()
-    convert_dict = {'Mileage': float}
-    df = df.astype(convert_dict)
+    df = integrate(1)
     
     #Input->
     try:

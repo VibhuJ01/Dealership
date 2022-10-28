@@ -8,36 +8,18 @@ def main():
     print("As per your Needs")
     print("\n--------------------------------------------\n")
     
-    print("1. Staff Member")
-    print("2. Customer")
+    print("1. Signup")
+    print("2. Login")
     print("3. Exit")
     ch = input("Login as: ")
     print("\n--------------------------------------------\n")
     
     if(ch == "1"):
-        pass
+        signup(0)
 
     elif(ch == "2"):
-        print("1. Signup")
-        print("2. Login")
-        print("3. Back")
-        ch2 = input("What do you want to do?: ")
-        print("\n--------------------------------------------\n")
-
-        if(ch2 == "1"):
-            signup()
-            
-        elif(ch2 == "2"):
-            login()
-
-        elif(ch2 == '3'):
-            pass
-
-        else:
-            print("Wrong Input")  
-            print("\n--------------------------------------------\n")
+        login()
        
-
     elif(ch == "3"):
         print("Thank you for Visiting Dealership")
         print("Have a Nice Day")

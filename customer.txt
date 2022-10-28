@@ -3,20 +3,15 @@
 () - Future plans
 
 [
-Staff:
-gaadi verification
-Add a new staff
 answer queries
-df.loc[len(df.index)] = ['Amy', 89, 93] 
-]
-
-
-
-(
 How may i help you?
 :- Report an issue
 :- Ask a question
 :- Report a bug
+]
+
+(
+
 
 BUY/SELL:
 message seller/buyer
@@ -65,6 +60,14 @@ Mileage
 Seats
 Engine
 Horse Power 
+
+
+MANAGER:
+Add a new staff
+Remove a staff
+Display all the manager
+gaadi verification
+df.loc[len(df.index)] = ['Amy', 89, 93] 
 
 CHANGES:
 BUY:

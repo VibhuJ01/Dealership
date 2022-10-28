@@ -1,8 +1,9 @@
+from car_ver import car_ver,sold
 import mysql.connector as ms
 from tabulate import tabulate
 mycon=ms.connect(host="localhost",user="root",db="autos",passwd="vibhu")
 cur1 = mycon.cursor()
-from car_ver import car_ver,sold
+
 
 def reg_seller(username):
     sql = "select * from car_desc"
@@ -21,14 +22,16 @@ def reg_seller(username):
     if(ch == '1'):
         sell(username,s)
 
-    elif(ch == '2'):        
-        car_ver(username)
+    elif(ch == '2'):
+        a = display(username,2)
+        if(a != 0): 
+            car_ver(username)
 
     elif(ch == "3"):
-        display(username)
+        display(username,0)
 
     elif(ch == '4'):
-        a = display_unsold(username)
+        a = display(username,1)
         if(a == 1):
             sold(username)
         
@@ -132,42 +135,48 @@ def sell(username,s):
         print("\n--------------------------------------------\n") 
         car_ver(username) 
 
-def display(username):
+def display(username,a):
     sql = "select * from car_desc"
     cur1.execute(sql)
     result = cur1.fetchall()
     l = []
-    for i in result:
-        if(i[1] == username.lower()):
-            l.append(i)
+    if(a == 0):
+        for i in result:
+            if(i[1] == username.lower()):
+                l.append(i)
 
-    if(len(l) == 0):
-        print("You haven't Registered any Car")
-        print("\n--------------------------------------------\n")
-        return
+        if(len(l) == 0):
+            print("You haven't Registered any Car")
+            print("\n--------------------------------------------\n")
+            return
+        print("All your Cars are Listed Below:\n")
+        
+    elif(a == 1):
+        for i in result:
+            if(i[1] == username.lower() and i[13] == 'NO'):
+                l.append(i)
+
+        if(len(l) == 0):
+            print("All your Cars are Either Sold or You haven't Registered any Car")
+            print("\n--------------------------------------------\n")
+            return 0
+        print("All your Unsold Cars are Listed Below:\n")
+        
+    else:
+        for i in result:
+            if(i[1] == username.lower() and i[11] == "NO"):
+                l.append(i)
+
+        if(len(l) == 0):
+            print("You have No Pending Unverified Car")
+            print("\n--------------------------------------------\n")
+            return 0
+        print("All your Unverified Cars are Listed Below:\n")
+        
     
-    print("All of your Cars are Listed Below:\n")
-    keys = ['Serial No', 'Username', 'Name','Price','Model','Odometer','Fuel','Transmission','Mileage','Seats','Description','Verified','On_sale','Sold']
-    print(tabulate(l, headers = keys, tablefmt = 'pretty',showindex = False))
-    print("\n--------------------------------------------\n")
-
-
-def display_unsold(username):
-    sql = "select * from car_desc"
-    cur1.execute(sql)
-    result = cur1.fetchall()
-    l = []
-    for i in result:
-        if(i[1] == username.lower() and i[13] == 'NO'):
-            l.append(i)
-
-    if(len(l) == 0):
-        print("All your Cars are Either Sold or You haven't Registered any Car")
-        print("\n--------------------------------------------\n")
-        return 0
-    
-    print("All of your Unsold Cars are Listed Below:\n")
-    keys = ['Serial No', 'Username', 'Name','Price','Model','Odometer','Fuel','Transmission','Mileage','Seats','Description','Verified','On_sale','Sold']
+    keys = ['Serial No', 'Username', 'Name','Price','Model Year','Odometer','Fuel','Transmission','Mileage','Seats','Description','Verified','On_sale','Sold']
     print(tabulate(l, headers = keys, tablefmt = 'pretty',showindex = False))
     print("\n--------------------------------------------\n")
     return 1
+
+    

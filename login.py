@@ -1,6 +1,6 @@
 from buy import buy
 from seller import seller
-
+from manager import manager
 import mysql.connector as ms
 mycon = ms.connect(host="localhost",user="root",db="autos",passwd="vibhu")
 cur1 = mycon.cursor()
@@ -19,8 +19,11 @@ def login():
             print('Login is Succesful')
             print("\n--------------------------------------------\n")
             flag = 1
-            afterlogin(username,password)
-
+            if(i[4] == 'YES'):
+                manager(username,password)
+            else:
+                afterlogin(username,password)
+            break
             
     if(flag != 1):
         print("Invalid Username or Password")
