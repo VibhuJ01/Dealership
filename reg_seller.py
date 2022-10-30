@@ -1,6 +1,7 @@
 from car_ver import car_ver,sold
 import mysql.connector as ms
 from tabulate import tabulate
+from message import messageS
 mycon=ms.connect(host="localhost",user="root",db="autos",passwd="vibhu")
 cur1 = mycon.cursor()
 
@@ -36,7 +37,7 @@ def reg_seller(username):
             sold(username)
         
     elif(ch == '5'):
-        pass
+        messageS(username)
   
     elif(ch == '6'):
         return

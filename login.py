@@ -18,6 +18,7 @@ def login():
     flag = 0
     for i in result:
         if(i[2] == username.lower() and i[3] == password):
+            username = username.lower()
             print('Login is Succesful')
             print("\n--------------------------------------------\n")
             flag = 1

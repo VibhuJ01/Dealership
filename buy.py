@@ -9,7 +9,7 @@ def buy(username):
     print("1. Buy a Car")
     print("2. Wishlist")
     print('3. Message Seller')
-    print("3. Back")
+    print("4. Back")
     ch = input("What do you want to do?: ")
     print("\n--------------------------------------------\n")
     

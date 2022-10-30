@@ -110,14 +110,23 @@ def wishlist():
 def talk():
     sql = '''create table talk(
             car_no int not null,
-            username varchar(50) not null,
-            seller varchar(50) not null,
+            sender varchar(50) not null,
+            receiver varchar(50) not null,
             message varchar(300) not null
             )'''    
     cur1.execute(sql)
     mycon.commit()
 
-talk()
+def talkS():
+    sql = '''create table talkS(
+            serial_no int primary key auto_increment,
+            car_no int not null,
+            sender varchar(50) not null
+            )'''    
+    cur1.execute(sql)
+    mycon.commit()
+    
+talkS()
 cur1.close()
 mycon.close()
 print("Done")

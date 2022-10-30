@@ -75,7 +75,7 @@ def register(username):
             mycon.commit()
 
     except:
-        
+        print("\n--------------------------------------------\n")
         print("Wrong Input, Try Again")
         print("\n--------------------------------------------\n")
         return
