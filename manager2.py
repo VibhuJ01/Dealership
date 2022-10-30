@@ -11,7 +11,7 @@ def afterloginM(username,password):
     print("\n--------------------------------------------\n")
 
     if(ch == '1'):
-        buy()
+        buy(username)
 
     elif(ch == "2"):
         seller(username)

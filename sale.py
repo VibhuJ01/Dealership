@@ -96,7 +96,7 @@ def integrate(a):
     df = pd.read_csv("dataset.csv")
     
 
-    sql = 'select * from ins'
+    sql = 'select serial_no,name,price,year,odo,fuel,trans,mil,hp,seats from ins'
     cur1.execute(sql)
     result = cur1.fetchall()
 

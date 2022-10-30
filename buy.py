@@ -1,36 +1,38 @@
 from tabulate import tabulate
 import pandas as pd
-from filters import filters
-from filters import pick
+from filters import filters,pick
 from sale import integrate
+from message import wishlist,addW
 
-
-def buy():
+def buy(username):
+    df = integrate(1)
     print("1. Buy a Car")
-    print("2. Talk to Sellers")
+    print("2. Wishlist")
+    print('3. Message Seller')
     print("3. Back")
     ch = input("What do you want to do?: ")
     print("\n--------------------------------------------\n")
     
     if(ch == '1'):
-        buying()
+        buying(username,df)
 
     elif(ch == '2'):
-        pass
-        #Talk to sellers wala ayega
-    
+        wishlist(username,df,0)
+
     elif(ch == '3'):        
+        wishlist(username,df,1)
+    
+    elif(ch == '4'):        
         return
     
     else:
         print("Wrong Input")
         print("\n--------------------------------------------\n")
     
-    buy()
+    buy(username)
 
-def buying():
-    df = integrate(1)
-    
+def buying(username,df):
+      
     #Input->
     try:
         print('1. Enter Budget')
@@ -115,9 +117,9 @@ def buying():
             return
     
         printing(df)
-        fil(df)
+        fil(df,username)
 
-def fil(df):
+def fil(df,username):
 
     print("1. Pick a Car")
     print("2. Apply Filters")
@@ -129,26 +131,26 @@ def fil(df):
         car,a = pick(df)
         
         if(a == 0):
-            fil(df)
+            fil(df,username)
         else:
-            pass
-        # yaha pe ab seller ko msg karna hai
+            addW(car,username)
         
     elif(ch == "2"):
         df = filters(df)
         if(len(df) == 0):
             return
         
-        fil(df)
+        fil(df,username)
 
     elif(ch == "3"):
         print("\n--------------------------------------------\n")
         return
         
     else:
+        print("\n--------------------------------------------\n")
         print("Wrong Input")
         print("\n--------------------------------------------\n")
-        fil(df)
+        fil(df,username)
 
         
 def printing(df):

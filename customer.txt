@@ -3,21 +3,11 @@
 () - Future plans
 
 [
-answer queries
-How may i help you?
-:- Report an issue
-:- Ask a question
-:- Report a bug
-]
-
-(
-
-
 BUY/SELL:
 message seller/buyer
-)
+]
 
-
+()
 
 {
 BUY:
@@ -33,8 +23,14 @@ above what year
 km driven
 :-talk to seller
 
+
 LOGIN:
 change password
+How may i help you?
+:- Report an issue
+:- Ask a question
+:- Report a bug
+
 
 SELL:
 RESGISTERED OR DO YOU WANT TO REGISTER?
@@ -68,6 +64,8 @@ Remove a staff
 Display all the manager
 gaadi verification
 df.loc[len(df.index)] = ['Amy', 89, 93] 
+answer queries
+
 
 CHANGES:
 BUY:

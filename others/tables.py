@@ -78,10 +78,10 @@ def queries():
     mycon.commit() 
 
 
-def ins():
-    
+def ins():   
     sql = '''create table ins(
             serial_no int primary key,
+            seller varchar(50) not null,
             Name varchar(50) not null,
             price int not null,
             year int not null,
@@ -94,9 +94,30 @@ def ins():
             )'''    
     cur1.execute(sql)
     mycon.commit()
+    
 
-ins() 
-queries()
+def wishlist():
+    sql = '''create table wishlist(
+            serial_no int primary key auto_increment,
+            username varchar(50) not null,
+            seller varchar(50) not null,
+            car_no int not null,
+            car_name varchar(100) not null
+            )'''    
+    cur1.execute(sql)
+    mycon.commit()
+
+def talk():
+    sql = '''create table talk(
+            car_no int not null,
+            username varchar(50) not null,
+            seller varchar(50) not null,
+            message varchar(300) not null
+            )'''    
+    cur1.execute(sql)
+    mycon.commit()
+
+talk()
 cur1.close()
 mycon.close()
 print("Done")

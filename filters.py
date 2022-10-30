@@ -60,8 +60,8 @@ def pick(df):
             ch1 = input("Do wanna buy this Car?(y/n) ")
             print("\n--------------------------------------------\n")
             if(ch1.lower() == "y"):
-                a = df.loc[ch]
-                return a,1
+                car = df.loc[ch]
+                return car,1
 
             else:
                 return "No",0
