@@ -89,7 +89,7 @@ def message(l,df,username):
         if(len(result) == 0):
 
             sql = 'insert into talkS(car_no,sender) values(%s,%s)'
-            data = (ser,username)
+            data = (ser,receiver)
             cur1.execute(sql,data)
             mycon.commit()
             
@@ -114,16 +114,21 @@ def message(l,df,username):
                 data = (ser,username,receiver,mess)
                 cur1.execute(sql,data)
                 mycon.commit()
-                print(mess,'\n')
+                print('\n',mess,'\n')
             
     
 
 
 def messageS(username):
     
-    sql = 'select * from talkS'
-    cur1.execute(sql)
+    sql = 'select * from talkS where sender = %s'
+    data = [username]
+    cur1.execute(sql,data)
     result = cur1.fetchall()
+    if(len(result) == 0):
+        print('No buyers Yet')
+        print("\n--------------------------------------------\n")
+        return
     keys =  ['Serial_No','Car_No','Seller']
     print(tabulate(result, headers = keys, tablefmt = 'pretty',showindex = False))
     print("\n--------------------------------------------\n")
@@ -175,6 +180,6 @@ def messageS(username):
                 data = (ser,username,receiver,mess)
                 cur1.execute(sql,data)
                 mycon.commit()
-                print(mess,'\n')
+                print('\n',mess,'\n')
             
 
