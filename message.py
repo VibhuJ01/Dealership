@@ -114,7 +114,7 @@ def message(l,df,username):
                 data = (ser,username,receiver,mess)
                 cur1.execute(sql,data)
                 mycon.commit()
-                print("\n\t\t\t\t\t",mess,'\n')
+                print(mess,'\n')
             
     
 
@@ -175,6 +175,6 @@ def messageS(username):
                 data = (ser,username,receiver,mess)
                 cur1.execute(sql,data)
                 mycon.commit()
-                print("\n\t\t\t\t\t",mess,'\n')
+                print(mess,'\n')
             
 
