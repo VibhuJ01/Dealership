@@ -121,7 +121,8 @@ def talkS():
     sql = '''create table talkS(
             serial_no int primary key auto_increment,
             car_no int not null,
-            sender varchar(50) not null
+            sender varchar(50) not null,
+            seller varchar(50) not null
             )'''    
     cur1.execute(sql)
     mycon.commit()
