@@ -26,7 +26,7 @@ def reg_seller(username):
     elif(ch == '2'):
         a = display(username,2)
         if(a != 0): 
-            car_ver(username)
+            car_ver(username,result)
 
     elif(ch == "3"):
         display(username,0)
@@ -174,7 +174,6 @@ def display(username,a):
             return 0
         print("All your Unverified Cars are Listed Below:\n")
         
-    
     keys = ['Serial No', 'Username', 'Name','Price','Model Year','Odometer','Fuel','Transmission','Mileage','Seats','Description','Verified','On_sale','Sold']
     print(tabulate(l, headers = keys, tablefmt = 'pretty',showindex = False))
     print("\n--------------------------------------------\n")

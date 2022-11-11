@@ -5,6 +5,24 @@
 [
 BUY/SELL:
 message seller/buyer
+if wronge input it goes to main page again
+int wale ques main strings dalke koi error nahi aata hai
+ 
+buyer-
+in talk to seller instead of 'enter' to stop writing change it to ecs or specify more properly 
+feedback not working
+in filter - instead of model no write above what model year  
+odometer problem
+remove from whislist rehe gaya
+
+seller-
+DOB main dd/mm/yyyy dalega 
+press 'n' pe seller registration complete dikha raha hai(return dalna hai)
+
+in sell,verify a car create a edit coloum 
+print description sep
+mark as sold error- jo serial no nahi hai usmai bhi sold dikha rha hai 
+display mein error mark as sold is not updated in python but is updated in mysql
 ]
 
 ()

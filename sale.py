@@ -68,18 +68,17 @@ def sale():
 def putonsale(ser):
     
     sql = '''select serial_no,name,price,year,odometer,
-            fuel,transmission,mileage,seats from car_desc'''
+            fuel,transmission,mileage,seats,username from car_desc'''
     cur1.execute(sql)
     result = cur1.fetchall()
 
     for i in range(len(result)):
         if(result[i][0] == ser):
             break
-
     i = result[i]
     ser = integrate(0)
-    sql = 'insert into ins values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
-    data = (ser,i[1],i[2],i[3],i[4],i[5],i[6],i[7],0,i[8])
+    sql = 'insert into ins values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+    data = (ser,i[9],i[1],i[2],i[3],i[4],i[5],i[6],i[7],0,i[8])
     cur1.execute(sql,data)
     mycon.commit()
 

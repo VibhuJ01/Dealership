@@ -32,7 +32,7 @@ def register(username):
         lname = input("Enter you Last  Name: ")
         print("\n--------------------------------------------\n")
         
-        dob = input("Enter your DOB(xx/xx/xxxx): ")
+        dob = input("Enter your DOB(DD/MM/YYYY): ")
         print("\n--------------------------------------------\n")
         
         padd = input("Enter you Permenant Address: ")
@@ -73,6 +73,12 @@ def register(username):
             data = (fname,lname,dob,padd,username.lower(),ph,al,docn,doc)
             cur1.execute(sql,data)
             mycon.commit()
+
+        elif(ch == 'n'):
+            return
+
+        else:
+            Error
 
     except:
         print("\n--------------------------------------------\n")

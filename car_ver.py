@@ -3,7 +3,7 @@ mycon=ms.connect(host="localhost",user="root",db="autos",passwd="vibhu")
 cur1 = mycon.cursor()
 from tabulate import tabulate
 
-def car_ver(username):
+def car_ver(username,result):
 
     ch = input('Do you want to Verify any Car now?(y/n) ')
     if(ch == 'y'):
