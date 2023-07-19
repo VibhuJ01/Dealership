@@ -34,6 +34,7 @@ def filters(df):
     if(len(df) == 0):
             print("\n--------------------------------------------\n")
             print("We dont have Cars of that Specification")
+            print("\n--------------------------------------------\n")
             return df
         
     printing(df)
